@@ -1,10 +1,10 @@
-
 # Database Configuration
 
-Here I am providing the schema for all the tables. In total there are 6 tables (my user account name is called `jobs`):
+Here I am providing the schema for all the tables. In total there are 6 tables (my user account name is called `jobs`). 
 
+`postgre.sql` contains the sql commands to create the following tables and insert basic entries into so tables like `auth.roles` and `auth.permissions`.
 
-1. PG schema for public.jobs table
+1. PG schema for `public.jobs` table. `public.jobs` is the table storing information about job advertisements.
 ```
                                            Table "public.jobs"
      Column      |            Type             | Collation | Nullable |             Default              
@@ -25,7 +25,7 @@ Indexes:
 
 The remaining tables are under the 'auth' schema.
 
-2. PG schema for auth.users table
+2. PG schema for auth.users table. `auth.users` is the table for user account details.
 ```
 jobs=> \d auth.users
                                              Table "auth.users"
@@ -45,7 +45,7 @@ Referenced by:
 
 ```
 
-3. PG schema for auth.user_roles table
+3. PG schema for `auth.user_roles` table. `auth.user_roles` maps a user's id to their role id, which is an integer encoding one of `admin`, `moderator` or `user`. An entry in this table is created alongside `auth.users` when a new user registers. 
 ```
               Table "auth.user_roles"
  Column  |  Type   | Collation | Nullable | Default 
@@ -59,7 +59,7 @@ Foreign-key constraints:
     "user_roles_user_id_fkey" FOREIGN KEY (user_id) REFERENCES auth.users(id)
 ```
 
-4. PG schema for auth.roles tables
+4. PG schema for `auth.roles` table. `auth.roles` maps the `role_id` integer to the role, which is one of `admin`, `moderator` or `user`.
 ```
 jobs=> \d auth.roles
                                          Table "auth.roles"
@@ -76,7 +76,7 @@ Referenced by:
     TABLE "auth.user_roles" CONSTRAINT "user_roles_role_id_fkey" FOREIGN KEY (role_id) REFERENCES auth.roles(id)
 ```
 
-5. PG schema for auth.role_permissions table
+5. PG schema for `auth.role_permissions` table. `auth.role_permissions` maps each `role_id` to the `permission_id` which indicates what actions the user is permitted to perform.
 ```
 jobs=> \d auth.role_permissions
               Table "auth.role_permissions"
@@ -89,4 +89,19 @@ Indexes:
 Foreign-key constraints:
     "role_permissions_permission_id_fkey" FOREIGN KEY (permission_id) REFERENCES auth.permissions(id)
     "role_permissions_role_id_fkey" FOREIGN KEY (role_id) REFERENCES auth.roles(id)
+```
+
+6. PG schema for `auth.permissions`. It describes the type of actions that can be performed on the database.
+```
+                                         Table "auth.permissions"
+   Column    |         Type          | Collation | Nullable |                   Default                    
+-------------+-----------------------+-----------+----------+----------------------------------------------
+ id          | integer               |           | not null | nextval('auth.permissions_id_seq'::regclass)
+ name        | character varying(50) |           | not null | 
+ description | text                  |           |          | 
+Indexes:
+    "permissions_pkey" PRIMARY KEY, btree (id)
+    "permissions_name_key" UNIQUE CONSTRAINT, btree (name)
+Referenced by:
+    TABLE "auth.role_permissions" CONSTRAINT "role_permissions_permission_id_fkey" FOREIGN KEY (permission_id) REFERENCES auth.permissions(id)
 ```
