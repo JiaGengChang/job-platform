@@ -1,7 +1,6 @@
 # Job platform
 * Source code for a job advertisement website I am building. 
 * The idea of this website is that recruiters post job advertisements and regular users can apply to these job postings. 
-* Recruiters will receive a resume of the users. 
 
 # Progress tracker
 | Date       | Progress                  |
@@ -13,6 +12,15 @@
 | 2024-10-08 | CRUD API for user accounts |
 | 2024-10-?? | *TODO User session management with JWT |
 
+# Feature ideas
+| Feature                        | Description                                                                 |
+|--------------------------------|-----------------------------------------------------------------------------|
+| User Authentication            | Implement user login and registration with JWT.                             |
+| User Profiles                  | Enable users to create and update their profiles with personal information. |
+| Resume Upload                  | Allow users to upload and manage their resumes.                             |
+| Job Search                     | Add search functionality to filter job posts by keywords, location, etc.    |
+| Email Notifications            | Send email notifications to users for newly posted jobs.                    |
+| Job Recommendations            | Provide job recommendations based on user profiles and activity.            |
 
 # Database ERD
 See detailed description of schema in `config/README.md`
