@@ -19,11 +19,13 @@ CREATE TABLE auth.user_roles (
 );
 
 /*optional - auto delete user info from other tables*/
+/*
 ALTER TABLE auth.user_roles
 ADD CONSTRAINT fk_user
 FOREIGN KEY (user_id)
 REFERENCES auth.users(id)
 ON DELETE CASCADE;
+*/
 
 CREATE TABLE auth.permissions (
     id SERIAL PRIMARY KEY,
