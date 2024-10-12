@@ -9,9 +9,9 @@ const port = process.env.PORT || 3000;
 app.use(express.json()); //allow return of json data
 
 app.get("/", (req,res)=>{res.send('Index page goes here');});
-app.use("/api/v1/jobs", jobRoutes);
-app.use("/api/v1/users", userRoutes);
-app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/jobs", jobRoutes); // CRUD for job postings
+app.use("/api/v1/users", userRoutes); // CRUD for user accounts
+app.use("/api/v1/auth", authRoutes); // login, register, sign-out
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
