@@ -1,0 +1,82 @@
+[
+  {
+    "job_title": "Software Engineer",
+    "job_description": "We are seeking a skilled software engineer to join our team. The ideal candidate will have experience with Java, Spring, and cloud-based technologies.",
+    "company_name": "ABC Corporation",
+    "date_posted": "2023-02-15",
+    "original_link": "https://www.example.com/jobs/software-engineer",
+    "location": "New York, NY"
+  },
+  {
+    "job_title": "Data Scientist",
+    "job_description": "We are seeking a highly skilled data scientist to join our team. The ideal candidate will have experience with machine learning, data visualization, and statistical analysis.",
+    "company_name": "XYZ Inc.",
+    "date_posted": "2023-02-20",
+    "original_link": "https://www.example.com/jobs/data-scientist",
+    "location": "San Francisco, CA"
+  },
+  {
+    "job_title": "Data Engineer",
+    "job_description": "We are seeking a data engineer to build and maintain our data pipeline. Experience with Spark, Hadoop, and data warehousing is required.",
+    "company_name": "Google",
+    "date_posted": "2023-02-22",
+    "original_link": "https://www.example.com/jobs/data-engineer",
+    "location": "Mountain View, CA"
+  },
+  {
+    "job_title": "Tech Lead",
+    "job_description": "We are seeking a tech lead to lead our engineering team. Experience with cloud-based technologies and leadership skills are required.",
+    "company_name": "Microsoft",
+    "date_posted": "2023-02-25",
+    "original_link": "https://www.example.com/jobs/tech-lead",
+    "location": "Seattle, WA"
+  },
+  {
+    "job_title": "DevOps Engineer",
+    "job_description": "We are seeking a DevOps engineer to join our team. Experience with containerization, CI/CD, and cloud-based technologies is required.",
+    "company_name": "Amazon",
+    "date_posted": "2023-02-28",
+    "original_link": "https://www.example.com/jobs/devops-engineer",
+    "location": "San Francisco, CA"
+  },
+  {
+    "job_title": "UX Designer",
+    "job_description": "We are seeking a UX designer to join our team. Experience with human-centered design and design tools like Sketch and Figma is required.",
+    "company_name": "Facebook",
+    "date_posted": "2023-03-01",
+    "original_link": "https://www.example.com/jobs/ux-designer",
+    "location": "Menlo Park, CA"
+  },
+  {
+    "job_title": "Full Stack Engineer",
+    "job_description": "We are seeking a full stack engineer to join our team. Experience with React, Node.js, and cloud-based technologies is required.",
+    "company_name": "Palantir",
+    "date_posted": "2023-03-03",
+    "original_link": "https://www.example.com/jobs/full-stack-engineer",
+    "location": "Palo Alto, CA"
+  },
+  {
+    "job_title": "Product Manager",
+    "job_description": "We are seeking a product manager to join our team. Experience with product development and launch is required.",
+    "company_name": "Airbnb",
+    "date_posted": "2023-03-05",
+    "original_link": "https://www.example.com/jobs/product-manager",
+    "location": "San Francisco, CA"
+  },
+  {
+    "job_title": "Cloud Engineer",
+    "job_description": "We are seeking a cloud engineer to join our team. Experience with AWS, Azure, or GCP is required.",
+    "company_name": "Salesforce",
+    "date_posted": "2023-03-08",
+    "original_link": "https://www.example.com/jobs/cloud-engineer",
+    "location": "San Francisco, CA"
+  },
+  {
+    "job_title": "Artificial Intelligence Engineer",
+    "job_description": "We are seeking an AI engineer to join our team. Experience with deep learning, computer vision, and natural language processing is required.",
+    "company_name": "NVIDIA",
+    "date_posted": "2023-03-10",
+    "original_link": "https://www.example.com/jobs/ai-engineer",
+    "location": "Santa Clara, CA"
+  }
+]
