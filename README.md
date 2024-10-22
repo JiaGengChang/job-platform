@@ -11,11 +11,14 @@
 | 2024-10-06 | CRUD API for job posts, using postgreSQL |
 | 2024-10-08 | CRUD API for user accounts |
 | 2024-10-23 | User session management with JWT |
+| 2024-10-?? | Landing page with search bar and results cards |
 
 # Feature ideas
 | Feature                        | Description                                                                 |
 |--------------------------------|-----------------------------------------------------------------------------|
 | User Profiles                  | Enable users to create and update their profiles with personal information. |
+| Admin Panel                    | Admin panel for admins                                                      |
+| Job Ads Panel                  | Admin panel for job recruiters                                              |
 | Resume Upload                  | Allow users to upload and manage their resumes.                             |
 | Job Search                     | Add search functionality to filter job posts by keywords, location, etc.    |
 | Email Notifications            | Send email notifications to users for newly posted jobs.                    |
