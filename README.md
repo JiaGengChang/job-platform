@@ -10,12 +10,11 @@
 | 2024-10-05 | PostgreSQL DB configuration |
 | 2024-10-06 | CRUD API for job posts, using postgreSQL |
 | 2024-10-08 | CRUD API for user accounts |
-| 2024-10-?? | *TODO User session management with JWT |
+| 2024-10-23 | User session management with JWT |
 
 # Feature ideas
 | Feature                        | Description                                                                 |
 |--------------------------------|-----------------------------------------------------------------------------|
-| User Authentication            | Implement user login and registration with JWT.                             |
 | User Profiles                  | Enable users to create and update their profiles with personal information. |
 | Resume Upload                  | Allow users to upload and manage their resumes.                             |
 | Job Search                     | Add search functionality to filter job posts by keywords, location, etc.    |
