@@ -5,13 +5,13 @@ const pool = require('../config/db');
 
 const login = async (req,res) => {
     try{
-        const { email, password, user } = req.body;
+        const { email, password } = req.body;
         const validpassword = await bcrypt.compare(password, req.user.password_hash);
         if (!validpassword) {
             return res.status(401).json({message: 'Incorrect password'});
         }
         const token = jwt.sign(
-            {id: user.id, email: email}, 
+            {id: req.user.id, email: email}, 
             process.env.JWT_SECRET, 
             {expiresIn: '1h'}
         );
@@ -33,7 +33,6 @@ const logout = async (req,res) => {
     }
 }
 
-// NOT TESTED YET
 const register = async (req, res) => {
     try{
         await userController.createUser(req, res, async () => {
