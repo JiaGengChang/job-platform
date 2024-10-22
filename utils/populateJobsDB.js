@@ -6,7 +6,7 @@ const pool = require('../config/db'); // our PostgreSQL pool
 
 // Load the JSON array
 // same directory as this file
-const jobs = JSON.parse(fs.readFileSync('./jobs.json', 'utf8'));
+const jobs = JSON.parse(fs.readFileSync('utils/jobs.json', 'utf8'));
 
 // Function to check if an entry already exists
 async function checkIfExists(job) {
@@ -37,7 +37,7 @@ async function checkIfExists(job) {
 // Insert each job into the database
 // Does not insert duplicate jobs
 async function insertJobs() {
-  for (const job of jobs.slice(0,3)) {
+  for (const job of jobs) {
     const exists = await checkIfExists(job);
     if (!exists) {
       const query = {

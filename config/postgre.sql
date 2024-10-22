@@ -1,3 +1,14 @@
+CREATE TABLE IF NOT EXISTS jobs (
+    id SERIAL PRIMARY KEY,
+    job_title VARCHAR(255) NOT NULL,
+    job_description TEXT NOT NULL,
+    company_name VARCHAR(255) NOT NULL,
+    date_posted TIMESTAMP NOT NULL,
+    original_link TEXT NOT NULL,
+    location VARCHAR(255) NOT NULL,
+    UNIQUE (job_title, job_description, company_name, original_link, location)
+);
+
 CREATE SCHEMA auth;
 CREATE TABLE auth.users (
     id SERIAL PRIMARY KEY,
@@ -59,3 +70,8 @@ INSERT INTO auth.role_permissions (role_id, permission_id) VALUES
     (2, 3),  -- moderator can delete jobs
     (3, 4);  -- user can apply to jobs
 
+CREATE TABLE auth.token_blacklist (
+    id SERIAL PRIMARY KEY,
+    token TEXT NOT NULL,
+    expiry_date TIMESTAMP NOT NULL
+);
