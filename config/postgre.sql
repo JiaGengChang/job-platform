@@ -73,5 +73,5 @@ INSERT INTO auth.role_permissions (role_id, permission_id) VALUES
 CREATE TABLE auth.token_blacklist (
     id SERIAL PRIMARY KEY,
     token TEXT NOT NULL,
-    expiry_date TIMESTAMP NOT NULL
+    expiry TIMESTAMP NOT NULL
 );
