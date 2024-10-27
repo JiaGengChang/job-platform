@@ -11,7 +11,9 @@
 | 2024-10-06 | CRUD API for job posts, using postgreSQL |
 | 2024-10-08 | CRUD API for user accounts |
 | 2024-10-23 | User session management with JWT |
-| 2024-10-?? | Landing page with search bar and results cards |
+| 2024-10-28 | Landing page with search bar and results cards |
+| 2024-??-?? | Job page displaying job details |
+| 2024-??-?? | Implement keyword-based search function |
 
 # Feature ideas
 | Feature                        | Description                                                                 |
