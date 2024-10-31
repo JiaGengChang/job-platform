@@ -5,7 +5,7 @@ const searchResultsDiv = document.getElementById('search-results');
 searchForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const query = document.getElementById('search-input');
-    const url = `/api/v1/jobs/1`
+    const url = `/api/v1/jobs/`
   
     try {
       const response = await fetch(url);
@@ -15,7 +15,9 @@ searchForm.addEventListener('submit', async (event) => {
       for (const [key, value] of Object.entries(jobs)) {
         resultsHTML += `
           <div class="search-result-card" id="job-result-${key}">
-            <p><strong>${value['job_title']}</strong></p>
+            <p><strong>
+            <a href="/query?jobID=${value['id']}">${value['job_title']}</a>
+            </strong></p>
             <p>${value['location']}</p>
             <p>${value['job_description']}</p>
           </div>
