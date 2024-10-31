@@ -12,8 +12,10 @@
 | 2024-10-08 | CRUD API for user accounts |
 | 2024-10-23 | User session management with JWT |
 | 2024-10-28 | Landing page with search bar and results cards |
-| 2024-??-?? | Job page displaying job details |
-| 2024-??-?? | Implement keyword-based search function |
+| 2024-11-01 | Job page displaying job details |
+| 2024-11-?? | Implement keyword-based search function |
+| 2024-??-?? | Login and register page |
+| 2024-??-?? | Implement backend for forgot password |
 
 # Feature ideas
 | Feature                        | Description                                                                 |
